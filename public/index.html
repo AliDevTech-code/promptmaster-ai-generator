@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>PromptMaster AI - Midjourney, DALL-E & AI Image Prompt Generator</title>
+    
+    <meta name="title" content="PromptMaster AI - Midjourney, DALL-E & AI Image Prompt Generator">
+    <meta name="description" content="Generate high-quality 8K cinematic AI prompts for Midjourney, DALL-E 3, and Stable Diffusion free. Convert simple ideas into professional AI art prompts instantly.">
+    <meta name="keywords" content="AI prompt generator, Midjourney prompt helper, DALL-E 3 prompts, cinematic AI art prompts, free AI tool, AI image generator prompts, 3D render prompts, anime AI prompt, prompt engineering tool">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="PromptMaster AI">
+<script src="https://quge5.com/88/tag.min.js" data-zone="210865" async data-cfasync="false"></script>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="PromptMaster AI - Professional AI Art Prompt Generator">
+    <meta property="og:description" content="Convert your ideas into 4K cinematic AI art prompts in seconds. Optimized for Midjourney v6 and DALL-E 3.">
+    <meta property="og:image" content="logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "WebApplication",
+      "name": "PromptMaster AI",
+      "description": "Professional tool for generating Midjourney and DALL-E AI image prompts.",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background: #020617;
+            color: #f1f5f9;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .glass {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .prompt-box {
+            background: #000000;
+            border: 1px solid #1e293b;
+            border-radius: 1.5rem;
+            min-height: 200px;
+        }
+
+        .ad-slot {
+            min-height: 90px;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 25px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .active-cat {
+            background: #3b82f6 !important;
+            border-color: #60a5fa !important;
+            color: white !important;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .linear-gradient-btn {
+            background: linear-gradient(90deg, #3b82f6, #9333ea, #ec4899);
+            background-size: 200% auto;
+            transition: 0.5s;
+        }
+
+        .linear-gradient-btn:hover {
+            background-position: right center;
+        }
+
+        #copyTooltip {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        /* --- Professional Gradient Scrollbar --- */
+        ::-webkit-scrollbar {
+            width: 10px;
+            background: #020617;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #3b82f6, #9333ea, #ec4899);
+            border-radius: 50px;
+            border: 2px solid #020617;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #60a5fa, #a855f7, #f472b6);
+        }
+
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #9333ea #020617;
+        }
+/* --- Professional 2-Line Update Bar --- */
+.ad-slot {
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    padding: 20px;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column; /* Lines ko ek ke niche ek karne ke liye */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.1);
+}
+
+/* Update Text (Top Line) */
+.ad-slot span:first-child {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Tool Description (Bottom Line) */
+.ad-slot span:last-child {
+    opacity: 0.8;
+    letter-spacing: 0.5px;
+}
+
+/* Pulse indicator for the top line */
+.ad-slot span:first-child::before {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: #22c55e;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 10px #22c55e;
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+    0% { transform: scale(0.9); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.5; }
+    100% { transform: scale(0.9); opacity: 1; }
+}
+
+    </style>
+</head>
+
+<body class="min-h-screen px-4 md:px-8 py-6">
+
+    <nav class="max-w-6xl mx-auto flex justify-between items-center mb-12 py-4 border-b border-slate-900">
+        <div class="flex items-center gap-3">
+            <img src="logo.png" alt="PromptMaster AI Logo - Best AI Prompt Generator" class="w-10 h-10 object-contain rounded-lg">
+            <span class="text-xl font-extrabold tracking-tighter uppercase">PromptMaster <span class="text-blue-500">AI</span></span>
+        </div>
+    </nav>
+
+    <h1 class="sr-only">Free Midjourney and DALL-E AI Image Prompt Generator Online</h1>
+
+    <main class="max-w-5xl mx-auto">
+        <div class="ad-slot">
+    <div>
+        <span class="block text-blue-400">New: Midjourney v6.1 & DALL-E 3 Optimization Live! (Feb 2026)</span>
+        <span class="block text-slate-400 text-[10px] mt-1 lowercase font-medium">Turn simple ideas into professional 8K cinematic AI art prompts instantly.</span>
+    </div>
+</div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div class="space-y-8">
+                <div>
+                    <h2 class="text-xs font-black text-blue-500 uppercase tracking-[0.3em] mb-4">Step 1: Concept</h2>
+                    <input type="text" id="userInput" placeholder="Imagine something incredible..."
+                        class="w-full bg-slate-900/50 border border-slate-800 p-5 rounded-2xl outline-none focus:border-blue-500 transition-all text-lg font-medium">
+                </div>
+
+                <div>
+                    <h2 class="text-xs font-black text-purple-500 uppercase tracking-[0.3em] mb-4">Step 2: Artistic Style</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        <button onclick="setCategory('3D', this)"
+                            class="cat-btn p-3 rounded-xl border border-slate-800 bg-slate-900/30 text-[10px] font-bold hover:border-slate-600 transition-all">3D RENDER</button>
+                        <button onclick="setCategory('Cartoon', this)"
+                            class="cat-btn p-3 rounded-xl border border-slate-800 bg-slate-900/30 text-[10px] font-bold hover:border-slate-600 transition-all">ANIME</button>
+                        <button onclick="setCategory('Cinematic', this)"
+                            class="cat-btn p-3 rounded-xl border border-slate-800 bg-slate-900/30 text-[10px] font-bold hover:border-slate-600 transition-all active-cat">CINEMATIC</button>
+                        <button onclick="setCategory('Art', this)"
+                            class="cat-btn p-3 rounded-xl border border-slate-800 bg-slate-900/30 text-[10px] font-bold hover:border-slate-600 transition-all">OIL PAINT</button>
+                    </div>
+                </div>
+
+                <button onclick="generatePrompt()"
+                    class="w-full linear-gradient-btn py-5 rounded-2xl font-black text-white uppercase tracking-widest shadow-xl transition-all active:scale-95">
+                    Generate Engine ⚡
+                </button>
+            </div>
+
+            <div class="flex flex-col">
+                <h2 class="text-xs font-black text-pink-500 uppercase tracking-[0.3em] mb-4">Step 3: Copy Masterpiece</h2>
+                <div class="prompt-box p-6 flex-1 flex flex-col relative">
+                    <div id="finalPrompt" class="text-slate-400 leading-relaxed text-sm md:text-base italic flex-1">
+                        Select a style and click generate to build your professional AI prompt...
+                    </div>
+
+                    <span id="copyTooltip"
+                        class="absolute top-4 right-6 bg-green-500 text-[10px] px-2 py-1 rounded font-bold text-black uppercase">Copied!</span>
+
+                    <button onclick="copyPrompt()"
+                        class="mt-6 w-full linear-gradient-btn py-4 rounded-xl font-bold text-xs uppercase text-white shadow-lg transition-all active:scale-95">
+                        Copy Prompt to Clipboard
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="ad-slot">
+           <div>
+        <section class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center bg-slate-900/20 p-10 rounded-[2.5rem] border border-slate-900">
+            <div>
+                <div class="w-12 h-12 bg-blue-600/20 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 font-black text-xl">1</div>
+                <h3 class="font-bold text-white mb-2 uppercase text-sm">Write Concept</h3>
+                <p class="text-slate-500 text-[11px]">Describe your imagination like 'Astronaut on Mars'.</p>
+            </div>
+           
+            <div>
+                <div class="w-12 h-12 bg-purple-600/20 text-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 font-black text-xl">2</div>
+                <h3 class="font-bold text-white mb-2 uppercase text-sm">Select Style</h3>
+                <p class="text-slate-500 text-[11px]">Choose Cinematic, 3D, or Anime for specific AI styling.</p>
+            </div>
+          
+            <div>
+                <div class="w-12 h-12 bg-pink-600/20 text-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 font-black text-xl">3</div>
+                <h3 class="font-bold text-white mb-2 uppercase text-sm">Ready to Go</h3>
+                <p class="text-slate-500 text-[11px]">Paste the result into Midjourney or DALL-E for 8K art.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        let selectedCategory = 'Cinematic';
+
+        function setCategory(cat, btn) {
+            selectedCategory = cat;
+            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active-cat'));
+            btn.classList.add('active-cat');
+        }
+
+        function generatePrompt() {
+            const input = document.getElementById('userInput').value.trim();
+            if (!input) return;
+
+            const res = document.getElementById('finalPrompt');
+            res.innerHTML = "<span class='animate-pulse text-blue-500 font-bold'>Building AI Architecture...</span>";
+
+            const styleLibrary = {
+                '3D': "3D digital character render, Octane render, unreal engine 5 style, adorable aesthetics, soft rounded edges, bright studio lighting, white background, masterpiece, highly detailed, 8k --v 6.0",
+                'Cartoon': "Anime style, high quality illustration, clean lines, vibrant cell shading, expressive features, Makoto Shinkai aesthetic, 4k --ar 16:9",
+                'Cinematic': "Cinematic shot, hyper-realistic, shot on 35mm lens, f/1.8, depth of field, volumetric lighting, particles in air, intricate textures, masterpiece, 8k resolution, raw photo",
+                'Art': "Classic oil painting, thick impasto brushstrokes, textured canvas, dramatic chiaroscuro lighting, rich deep colors, museum quality, highly expressive"
+            };
+
+            setTimeout(() => {
+                res.classList.remove('italic');
+                res.innerHTML = `<span class="text-slate-200">${input}, ${styleLibrary[selectedCategory]}</span>`;
+            }, 800);
+        }
+
+        function copyPrompt() {
+            const text = document.getElementById('finalPrompt').innerText;
+            if (text.includes("Select a style")) return;
+
+            navigator.clipboard.writeText(text);
+
+            const tooltip = document.getElementById('copyTooltip');
+            tooltip.style.opacity = "1";
+            setTimeout(() => { tooltip.style.opacity = "0"; }, 1500);
+        }
+    </script>
+</body>
+</html>
